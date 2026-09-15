@@ -6,7 +6,7 @@ import {Main} from "./layout/sections/main/Main.tsx";
 import {AboutMe} from "./layout/sections/about/AboutMe.tsx";
 import {Skills} from "./layout/sections/skills/Skills.tsx";
 import {Resume} from "./layout/sections/resume/Resume.tsx";
-import Portfolio from "./layout/sections/portfolio/Portfolio.tsx";
+import {Portfolio} from "./layout/sections/portfolio/Portfolio.tsx";
 import Contact from "./layout/sections/contact/Contact.tsx";
 
 function App() {
