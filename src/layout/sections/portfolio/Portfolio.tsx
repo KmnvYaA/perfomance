@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitlePage} from "../../../components/TitlePage.tsx";
+import {TitleSection} from "../../../components/TitleSection.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {PortfolioBlock} from "./block/PortfolioBlock.tsx";
@@ -8,7 +8,7 @@ import wait from "../../../assets/images/waiting.jpg"
 export const Portfolio = () => {
     return (
         <StyledWorks>
-            <TitlePage back={"ПОРТФОЛИО"} front={"Мои работы"}/>
+            <TitleSection back={"ПОРТФОЛИО"} front={"Мои работы"}/>
             <FlexWrapper jusify={'space-around'} align={'center'} >
                 <PortfolioBlock title={"Ожидается:)"} img={wait}/>
                 <PortfolioBlock title={"Support:)"} img={support}/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitlePage} from "../../../components/TitlePage.tsx";
+import {TitleSection} from "../../../components/TitleSection.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Skill} from "./skill/Skill.tsx";
@@ -7,7 +7,7 @@ import {Skill} from "./skill/Skill.tsx";
 export const Skills = () => {
     return (
         <StyledSkills>
-            <TitlePage back={"НАВЫКИ"} front={"Чем я владею"}/>
+            <TitleSection back={"НАВЫКИ"} front={"Чем я владею"}/>
             <FlexWrapper wrap={"wrap"}>
                 <Skill iconId={'react'} title={'React'} text={'JavaScript-библиотека для создания пользовательских интерфейсов'}></Skill>
                 <Skill iconId={'ts '} title={'TypeScript'} text={'Cтрого типизированный язык программирования, основанный на JavaScript'}></Skill>

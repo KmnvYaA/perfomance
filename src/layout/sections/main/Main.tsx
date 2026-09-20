@@ -31,16 +31,16 @@ const CodeImg = styled.img`
 
 `
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     margin-top: 80px;
     color: white;
 `
-const Welcome = styled.div`
+const Welcome = styled.span`
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 50px
 `
-const Greeting = styled.div`
+const Greeting = styled.span`
     font-size: 32px;
     font-weight: bold;
     margin-bottom: -50px;

@@ -16,12 +16,12 @@ export const CardLine = (props: LinePropsType) => {
     );
 };
 
-const StyledCategory = styled.div`
+const StyledCategory = styled.span`
     font-size: 14px;
     color: #7D818A;
     font-weight: 400;
 `
-const StyledDescription = styled.div`
+const StyledDescription = styled.span`
     font-size: 15px;
     color: #FFFFFF;
     font-weight: 600;

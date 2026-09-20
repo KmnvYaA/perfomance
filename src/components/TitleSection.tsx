@@ -5,7 +5,7 @@ type TitlePropsType = {
     back: string;
     front: string;
 }
-export const TitlePage = (props: TitlePropsType) => {
+export const TitleSection = (props: TitlePropsType) => {
     return (
         <StyledTitleWrapper>
             <StyledBackgroundTitle>
@@ -13,23 +13,20 @@ export const TitlePage = (props: TitlePropsType) => {
             </StyledBackgroundTitle>
             <StyledForegroundTitle>
                 {props.front}
-                <StyledUnderLine/>
             </StyledForegroundTitle>
-
         </StyledTitleWrapper>
     );
 };
 
 const StyledTitleWrapper = styled.div`
     position: relative;
-    width: 100%;
-    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 `;
 
-const StyledBackgroundTitle = styled.div`
+const StyledBackgroundTitle = styled.h2`
     position: absolute;
     top: 50%; 
     left: 50%;
@@ -40,9 +37,10 @@ const StyledBackgroundTitle = styled.div`
     font-size: clamp(40px, 10vw, 120px);
     white-space: nowrap;
     z-index: 1;
+    margin: 0;
 `;
 
-const StyledForegroundTitle = styled.div`
+const StyledForegroundTitle = styled.span`
     position: relative;
     font-weight: 700;
     color: white;
@@ -51,12 +49,14 @@ const StyledForegroundTitle = styled.div`
     padding: 20px;
     white-space: nowrap;
     text-align: center;
-`;
 
-const StyledUnderLine = styled.div`
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #E7717D, #B183A2);
-    border-radius: 2px;
-    margin: 0 auto;
-`
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        margin: 0 auto;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #E7717D, #B183A2);
+    }
+`;

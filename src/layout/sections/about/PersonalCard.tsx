@@ -1,6 +1,7 @@
 import React from 'react';
 import {CardLine} from "./CardLine.tsx";
 import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 export const PersonalCard = () => {
     return (
@@ -8,17 +9,17 @@ export const PersonalCard = () => {
             <TitleCard>
                 Личная информация
             </TitleCard>
-            <LineWrapper>
+            <FlexWrapper direction={'column'} gap={'30px'}>
                 <CardLine category={'Имя'} description={'Яна'}/>
                 <CardLine category={'Email'} description={'kmnvyaa@gmail.com'}/>
                 <CardLine category={'Возраст'} description={'22'}/>
                 <CardLine category={'Откуда'} description={'Новосибирск, Россия'}/>
-            </LineWrapper>
+            </FlexWrapper>
         </CardWrapper>
     );
 };
 
-const TitleCard = styled.div`
+const TitleCard = styled.h3`
     color: #FFFFFF;
     font-weight: bold;
     font-size: 18px;
@@ -33,9 +34,4 @@ const CardWrapper = styled.div`
     border: 2px solid #3A3D46;
     height: max-content;
     padding: 20px 30px;
-`
-const LineWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 30px
 `
