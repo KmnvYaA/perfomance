@@ -7,6 +7,7 @@ export const theme = {
         primary300: "#7D7369", //border
         secondary100: "#E8D2AD", //акцент золотой
         secondary200: "#AAA8BC", //акцент лаванда
+        secondary300: "#C8E0BD", //акцент зеленый
 
     }
 

@@ -2,24 +2,28 @@ import React from 'react';
 import codeImg from '../../../assets/images/CodeCard.svg'
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} jusify={"space-around"} >
-                <div>
-                    <Welcome>
-                        Добро пожаловать
-                    </Welcome>
-                    <Greeting>
-                        Привет! Я -
-                    </Greeting>
-                    <MainTitle>
-                        Фронтенд-разработчик
-                    </MainTitle>
-                </div>
+            <Container>
+                <FlexWrapper align={"center"} jusify={"space-between"} >
+                    <FlexWrapper direction={'column'} gap={'30px'} align={'flex-start'} jusify={'center'}>
+                        <Welcome>
+                            Welcome
+                        </Welcome>
+                        <Greeting>
+                            Hi! I`m  -
+                        </Greeting>
+                        <MainTitle>
+                            Frontend developer
+                        </MainTitle>
+                    </FlexWrapper>
                     <CodeImg src={codeImg}/>
-            </FlexWrapper>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };
@@ -32,20 +36,31 @@ const CodeImg = styled.img`
 `
 
 const StyledMain = styled.section`
-    margin-top: 80px;
-    color: white;
+    min-height: 100vh;
+    display: flex;
+    
 `
-const Welcome = styled.span`
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 50px
+const Welcome = styled.h3`
+    font-size: 12px;
+    background-color: ${theme.colors.primary200};
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: fit-content;
+    border: 1px solid ${theme.colors.primary300};
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: ${theme.colors.secondary300};
+    }
 `
-const Greeting = styled.span`
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: -50px;
+const Greeting = styled.h2`
+    font-size: 48px;
 `
 const MainTitle = styled.h1`
-    margin-top: 80px;
-    color: white;
+    font-size: 48px;
 `
