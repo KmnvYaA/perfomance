@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../styles/Theme.ts";
 
 type TitlePropsType = {
     back: string;
@@ -23,7 +24,7 @@ const StyledTitleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 `;
 
 const StyledBackgroundTitle = styled.h2`
@@ -31,9 +32,9 @@ const StyledBackgroundTitle = styled.h2`
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.1;
+    opacity: 0.08;
     font-weight: 600;
-    color: rgb(108, 117, 125);
+    color: ${theme.colors.secondary100};
     font-size: clamp(40px, 10vw, 120px);
     white-space: nowrap;
     z-index: 1;
@@ -43,7 +44,7 @@ const StyledBackgroundTitle = styled.h2`
 const StyledForegroundTitle = styled.span`
     position: relative;
     font-weight: 700;
-    color: white;
+    color: ${theme.colors.neutral100};
     font-size: clamp(24px, 3vw, 30px);
     z-index: 2;
     padding: 20px;
@@ -57,6 +58,6 @@ const StyledForegroundTitle = styled.span`
         height: 4px;
         margin: 0 auto;
         border-radius: 2px;
-        background: linear-gradient(90deg, #E7717D, #B183A2);
+        background: linear-gradient(90deg, ${theme.colors.secondary100}, ${theme.colors.secondary200});
     }
 `;

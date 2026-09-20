@@ -34,5 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     section {
         background: ${theme.colors.primary100};
+        padding: 100px 0;
     }
 `

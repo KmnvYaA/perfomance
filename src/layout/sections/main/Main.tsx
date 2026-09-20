@@ -60,7 +60,12 @@ const Welcome = styled.h3`
 `
 const Greeting = styled.h2`
     font-size: 48px;
+    color: ${theme.colors.neutral100};
 `
 const MainTitle = styled.h1`
     font-size: 48px;
+    background: linear-gradient(90deg, ${theme.colors.secondary100}, ${theme.colors.secondary200});
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 `
