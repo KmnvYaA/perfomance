@@ -1,0 +1,20 @@
+<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.000000" height="46.000000" fill="none" customFrame="url(#clipPath_2)">
+	<defs>
+		<linearGradient id="paint_linear_1" x1="39.2634506" x2="6.73653793" y1="39.2634583" y2="6.73654556" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(172,59,97)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(177,131,162)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<clipPath id="clipPath_2">
+			<rect width="46.000000" height="46.000000" x="0.000000" y="0.000000" rx="14.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_3">
+			<rect width="20.000000" height="20.000000" x="13.000000" y="13.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="Фрейм 117" width="46.000000" height="46.000000" x="0.000000" y="0.000000" rx="14.000000" fill="url(#paint_linear_1)" />
+	<g id="mail" customFrame="url(#clipPath_3)">
+		<rect id="mail" width="20.000000" height="20.000000" x="13.000000" y="13.000000" />
+		<path id="Вектор 63" d="M31.3334 18.8335L23.8409 23.606C23.5867 23.7537 23.2979 23.8315 23.0038 23.8315C22.7098 23.8315 22.421 23.7537 22.1667 23.606L14.6667 18.8335" fill-rule="nonzero" stroke="rgb(255,255,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.666667" />
+		<rect id="Прямоугольник 4" width="16.666666" height="13.333333" x="14.666748" y="16.333496" rx="1.666667" stroke="rgb(255,255,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.666667" />
+	</g>
+</svg>
