@@ -2,36 +2,37 @@ import React from 'react';
 import {CardLine} from "./CardLine.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const PersonalCard = () => {
     return (
         <CardWrapper>
             <TitleCard>
-                Личная информация
+                Personal information
             </TitleCard>
             <FlexWrapper direction={'column'} gap={'30px'}>
-                <CardLine category={'Имя'} description={'Яна'}/>
+                <CardLine category={'Name'} description={'Yana'}/>
                 <CardLine category={'Email'} description={'kmnvyaa@gmail.com'}/>
-                <CardLine category={'Возраст'} description={'22'}/>
-                <CardLine category={'Откуда'} description={'Новосибирск, Россия'}/>
+                <CardLine category={'Age'} description={'22'}/>
+                <CardLine category={'From'} description={'Novosibirsk, Russia'}/>
             </FlexWrapper>
         </CardWrapper>
     );
 };
 
 const TitleCard = styled.h3`
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 18px;
+    color: ${theme.colors.neutral100};
+    font-weight: 600;
+    font-size: 20px;
     margin-bottom: 15px;
 `
 const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #2B2D34;
+    background:  ${theme.colors.primary200};
     border-radius: 30px;
-    border: 2px solid #3A3D46;
+    border: 1px solid ${theme.colors.primary300};
     height: max-content;
     padding: 20px 30px;
 `

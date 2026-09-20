@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 type LinePropsType = {
     category: string;
@@ -18,11 +19,11 @@ export const CardLine = (props: LinePropsType) => {
 
 const StyledCategory = styled.span`
     font-size: 14px;
-    color: #7D818A;
+    color: ${theme.colors.neutral200};
     font-weight: 400;
 `
 const StyledDescription = styled.span`
     font-size: 15px;
-    color: #FFFFFF;
+    color: ${theme.colors.neutral200};
     font-weight: 600;
 `

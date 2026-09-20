@@ -24,7 +24,7 @@ const StyledTitleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
 `;
 
 const StyledBackgroundTitle = styled.h2`
