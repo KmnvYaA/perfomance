@@ -5,6 +5,7 @@ export const theme = {
         primary100: "#211D1B", //фон
         primary200: "#39322E", //фон акцент
         primary300: "#7D7369", //border
+        primary400: "#2B2725",
         secondary100: "#E8D2AD", //акцент золотой
         secondary200: "#AAA8BC", //акцент лаванда
         secondary300: "#C8E0BD", //акцент зеленый

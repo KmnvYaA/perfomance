@@ -4,7 +4,7 @@ import {FlexWrapper} from "./FlexWrapper.tsx";
 
 export const Social = () => {
     return (
-        <FlexWrapper direction={'row'}>
+        <FlexWrapper direction={'row'} gap={'20px'} >
             <SocialLinks idIcon={'instagram'}/>
             <SocialLinks idIcon={'telegram'}/>
             <SocialLinks idIcon={'gitHub'}/>

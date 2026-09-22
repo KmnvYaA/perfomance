@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
+import {Button} from "../../../components/Button.tsx";
 
 export const Main = () => {
     return (
@@ -20,6 +21,7 @@ export const Main = () => {
                         <MainTitle>
                             Frontend developer
                         </MainTitle>
+                        <Button variant={'default'}>Hire me</Button>
                     </FlexWrapper>
                     <CodeImg src={codeImg}/>
                 </FlexWrapper>

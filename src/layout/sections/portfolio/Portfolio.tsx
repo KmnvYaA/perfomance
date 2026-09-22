@@ -4,15 +4,19 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {PortfolioBlock} from "./block/PortfolioBlock.tsx";
 import support from "../../../assets/images/support.png"
-import wait from "../../../assets/images/waiting.jpg"
+import wait from "../../../assets/images/waiting.png"
+import {Container} from "../../../components/Container.ts";
+
 export const Portfolio = () => {
     return (
         <StyledWorks>
-            <TitleSection back={"ПОРТФОЛИО"} front={"Мои работы"}/>
-            <FlexWrapper jusify={'space-around'} align={'center'} >
-                <PortfolioBlock title={"Ожидается:)"} img={wait}/>
-                <PortfolioBlock title={"Support:)"} img={support}/>
-            </FlexWrapper>
+            <Container>
+                <TitleSection back={"PORTFOLIO"} front={"My works"}/>
+                <FlexWrapper jusify={'space-around'} align={'center'}>
+                    <PortfolioBlock title={"Waiting:)"} img={wait} showOverlay={false}/>
+                    <PortfolioBlock title={"Content Automation and Management Service"} img={support} href={'https://github.com/KmnvYaA/perfomance'} showOverlay={true}/>
+                </FlexWrapper>
+            </Container>
         </StyledWorks>
 
     );

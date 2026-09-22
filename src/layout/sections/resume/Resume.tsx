@@ -3,36 +3,40 @@ import {TitleSection} from "../../../components/TitleSection.tsx";
 import styled from "styled-components";
 import {ResumeBlock} from "./resumeBlock/ResumeBlock.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Resume = () => {
     return (
         <StyledResume>
-            <TitleSection back={"РЕЗЮМЕ"} front={"Образование и опыт"}/>
-            <ResumeGrid>
-                <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
-                    <TitleWrapper>Образование</TitleWrapper>
-                    <ResumeBlock year={'2022-2026'}
-                                 title={'Специалист в области разработки и внедрения информационных систем'}
-                                 subtitle={'СГУПС'} description={'Высшее образование'}/>
-                    <ResumeBlock year={'2026-2027'} title={'Frontend разработчик'} subtitle={'IT-INCUBATOR'}
-                                 description={'Образование по специальности frontend разработчик'}/>
-                </FlexWrapper>
-                <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
-                    <TitleWrapper>Опыт</TitleWrapper>
-                    <ResumeBlock year={'04.2027 - н.в'} title={'Frontend разработчик'}
-                                 subtitle={'Проектная работа / Частичная занятость'}
-                                 description={'Разработка веб приложений'}/>
-                    <ResumeBlock year={'03.2025 - н.в'} title={'Разработчик ПО'} subtitle={'ООО "ПТРБ"'}
-                                 description={'Разработка и внедрение интернет решений'}/>
-                </FlexWrapper>
-            </ResumeGrid>
+            <Container>
+                <TitleSection back={"RESUME"} front={"My background"}/>
+                <ResumeGrid>
+                    <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
+                        <Title>Education</Title>
+                        <ResumeBlock year={'2026-2027'} title={'Frontend developer'} subtitle={'IT-INCUBATOR'}
+                                     description={'Education in Front-End Development'}/>
+                        <ResumeBlock year={'2022-2026'}
+                                     title={'Specialist in the development and implementation of information systems'}
+                                     subtitle={'СГУПС'} description={'Higher education'}/>
+                    </FlexWrapper>
+                    <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
+                        <Title>Experience</Title>
+                        <ResumeBlock year={'04.2027 - ...'} title={'Frontend developer'}
+                                     subtitle={'Project-Based Work / Part-Time Employment'}
+                                     description={'Web Application Development'}/>
+                        <ResumeBlock year={'03.2025 - ...'} title={'Software Developer'} subtitle={'"PTRB"'}
+                                     description={'Development and Implementation of Internet Solutions'}/>
+                    </FlexWrapper>
+                </ResumeGrid>
+            </Container>
         </StyledResume>
 
     );
 };
 
 const StyledResume = styled.section`
-   height: max-content;
+    height: fit-content;
 `
 const ResumeGrid = styled.div`
     display: grid;
@@ -40,8 +44,9 @@ const ResumeGrid = styled.div`
 
 `;
 
-const TitleWrapper = styled.h3`
-    color: #F4F4F6;
+const Title = styled.h3`
+    color: ${theme.colors.neutral100};
     font-size: 20px;
     font-weight: 500;
+    margin-bottom: 10px;
 `

@@ -32,7 +32,7 @@ const StyledBackgroundTitle = styled.h2`
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.08;
+    opacity: 0.1;
     font-weight: 600;
     color: ${theme.colors.secondary100};
     font-size: clamp(40px, 10vw, 120px);

@@ -12,7 +12,7 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
 
-                <TitleSection back={"ОБО МНЕ"} front={"Узнайте меня получше"}/>
+                <TitleSection back={"ABOUT ME"} front={"Know me better"}/>
                 <PageWrapper>
                     <FlexWrapper gap={'10px'} direction={'column'}>
                         <StyledTitleAbout>

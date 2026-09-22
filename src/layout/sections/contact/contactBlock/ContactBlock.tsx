@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {IconBase} from "../../../../components/icon/IconBase.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {theme} from "../../../../styles/Theme.ts";
 
 type ContactBlockProps = {
     idIcon: string;
@@ -29,12 +30,12 @@ const StyledContactBlock = styled.div`
     
 `
 const TitleContact = styled.span`
-    color: #7D818A;
+    color: ${theme.colors.neutral200};
     font-size: 13px;
     font-weight: 400;
 `
 const DescriptionContact = styled.span`
-    color: #F4F4F6;
+    color: ${theme.colors.neutral100};
     font-size: 16px;
     font-weight: 600;
 `
