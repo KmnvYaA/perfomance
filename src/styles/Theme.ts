@@ -9,7 +9,10 @@ export const theme = {
         secondary100: "#E8D2AD", //акцент золотой
         secondary200: "#AAA8BC", //акцент лаванда
         secondary300: "#C8E0BD", //акцент зеленый
+    },
 
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 390px)",
     }
-
 }

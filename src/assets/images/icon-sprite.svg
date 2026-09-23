@@ -99,5 +99,12 @@
             <rect id="Прямоугольник 4" width="16.666666" height="13.333333" x="14.666748" y="16.333496" rx="1.666667" stroke="#39322E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.666667" />
         </g>
     </g>
+    <g id="burgerIcon">
+            <path d="M0 0.75H18H0ZM0 8.75H18H0Z" fill="black"/>
+            <path d="M0 0.75H18M0 8.75H18" stroke="#F5EFE4" stroke-width="1.5"/>
+    </g>
+    <g id="closeIcon">
+        <path d="M4.5 0.5L13.5 9.5M13.5 0.5L4.5 9.5" stroke="#F5EFE4" stroke-width="1.5"/>
+    </g>
 
 </svg>
