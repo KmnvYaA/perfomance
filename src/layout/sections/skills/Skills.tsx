@@ -3,6 +3,7 @@ import {TitleSection} from "../../../components/TitleSection.tsx";
 import styled from "styled-components";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Skills = () => {
     return (
@@ -47,6 +48,10 @@ const StyledSkills = styled.section`
 `
 const SkillsGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
+    
+    @media ${theme.media.tablet} {
+        gap: 15px;
+    }
 `;

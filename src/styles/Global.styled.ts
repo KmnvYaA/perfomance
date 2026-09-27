@@ -35,5 +35,14 @@ export const GlobalStyle = createGlobalStyle`
     section {
         background: ${theme.colors.primary100};
         padding: 100px 0;
+        @media ${theme.media.tablet} {
+            padding: 80px 0;
+        }
+        @media ${theme.media.tablet} {
+            padding: 50px 0;
+        }
+    }
+    h1 {
+        font-size: inherit;
     }
 `

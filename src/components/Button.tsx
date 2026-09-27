@@ -22,7 +22,9 @@ export const Button = styled.button<ButtonPropsType>`
     ${({ variant }) =>
             variant === 'secondary' && css`
                 color: ${theme.colors.primary400};
-                background: linear-gradient(90deg, ${theme.colors.secondary100}, ${theme.colors.secondary200});
+                //background: linear-gradient(90deg, ${theme.colors.secondary100}, ${theme.colors.secondary200});
+                background-color: ${theme.colors.secondary100};
+                border: none;
             `}
 }
 `

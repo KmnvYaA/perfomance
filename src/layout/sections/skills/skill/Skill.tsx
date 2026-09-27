@@ -3,6 +3,7 @@ import {IconBase} from "../../../../components/icon/IconBase.tsx";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.ts";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+// import {font} from "../../../../styles/Common.ts";
 
 type styledPropsSkillType = {
     iconId: string,
@@ -13,7 +14,7 @@ export const Skill = (props: styledPropsSkillType) => {
     return (
         <StyledSkill>
             <IconWrapper>
-                <IconBase iconId={props.iconId} width={'30'} height={'30'} viewBox={ '0 0 20 20'}/>
+                <IconBase iconId={props.iconId} width={'25'} height={'25'} viewBox={ '0 0 20 20'}/>
             </IconWrapper>
             <FlexWrapper direction={'column'} gap={'10px'}>
                 <SkillTitle>
@@ -32,10 +33,26 @@ const StyledSkill = styled.article`
     border-radius: 20px;
     border: 1px solid ${theme.colors.primary300};
     padding: 25px 15px;
+    
+    @media ${theme.media.tablet} {
+        gap: 15px;
+    }
+    @media ${theme.media.mobile} {
+        padding: 15px 10px;
+    }
 `
 const SkillTitle = styled.h3`
     color: ${theme.colors.neutral100};
     font-size: 20px;
+    font-weight: 600 ;
+
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+    }
+    
+    @media ${theme.media.mobile} {
+        font-size: 16px;
+    }
 `
 const SkillText = styled.div`
     color: ${theme.colors.neutral200};
@@ -50,5 +67,10 @@ const IconWrapper = styled.div`
     justify-content: center;
     background-color: transparent;
     border-radius: 15px;
-    border: 1px solid ${theme.colors.secondary200}
+    border: 1px solid ${theme.colors.secondary200};
+    
+    @media ${theme.media.tablet} {
+        width: 60px;
+        height: 60px;
+    }
 `

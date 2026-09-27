@@ -25,6 +25,12 @@ const StyledTitleWrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    @media ${theme.media.tablet} {
+        margin-bottom: 80px;
+    }
+    @media ${theme.media.tablet} {
+        margin-bottom: 60px;
+    }
 `;
 
 const StyledBackgroundTitle = styled.h2`
@@ -39,13 +45,17 @@ const StyledBackgroundTitle = styled.h2`
     white-space: nowrap;
     z-index: 1;
     margin: 0;
+    
+    @media ${theme.media.mobileMini} {
+        font-size: clamp(40px, 13vw, 120px);
+    }
 `;
 
 const StyledForegroundTitle = styled.span`
     position: relative;
     font-weight: 700;
     color: ${theme.colors.neutral100};
-    font-size: clamp(24px, 3vw, 30px);
+    font-size: clamp(18px, 3vw, 30px);
     z-index: 2;
     padding: 20px;
     white-space: nowrap;

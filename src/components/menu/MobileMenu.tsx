@@ -37,7 +37,7 @@ export const MobileMenu = (props: MobileMenuProps) => {
 const StyledMenu = styled.nav`
     display: none;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.mobile} {
         display: block;
 
     }

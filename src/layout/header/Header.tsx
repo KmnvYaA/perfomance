@@ -25,7 +25,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primary100};
-    padding: 0 20px;
+    padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
