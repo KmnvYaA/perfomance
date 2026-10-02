@@ -10,7 +10,7 @@ export const PersonalCard = () => {
             <TitleCard>
                 Personal information
             </TitleCard>
-            <FlexWrapper direction={'column'} gap={'30px'}>
+            <FlexWrapper direction={'column'} gap={'15px'}>
                 <CardLine category={'Name'} description={'Yana'}/>
                 <CardLine category={'Email'} description={'kmnvyaa@gmail.com'}/>
                 <CardLine category={'Age'} description={'22'}/>
@@ -25,6 +25,12 @@ const TitleCard = styled.h3`
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 15px;
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+    }
+    @media ${theme.media.mobile} {
+        font-size: 16px;
+    }
 `
 const CardWrapper = styled.div`
     display: flex;
@@ -34,5 +40,5 @@ const CardWrapper = styled.div`
     border-radius: 30px;
     border: 1px solid ${theme.colors.primary300};
     height: max-content;
-    padding: 20px 30px;
+    padding: 30px;
 `

@@ -14,7 +14,7 @@ export const AboutMe = () => {
 
                 <TitleSection back={"ABOUT ME"} front={"Know me better"}/>
                 <PageWrapper>
-                    <FlexWrapper gap={'10px'} direction={'column'}>
+                    <FlexWrapper gap={'10px'} direction={'column'} jusify={'space-between'}>
                         <StyledTitleAbout>
                             From design to programming
                         </StyledTitleAbout>
@@ -45,15 +45,27 @@ const StyledTitleAbout = styled.h3`
     color: ${theme.colors.neutral100};
     margin-bottom: 10px;
     font-weight: 600;
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+    }
+    @media ${theme.media.mobile} {
+        font-size: 16px;
+    }
 `
 
 const StyledTextAbout = styled.p`
     font-size: 15px;
     color: ${theme.colors.neutral200};
     line-height: 1.8;
+    @media ${theme.media.tablet} {
+        font-size: 14px;
+    }
 `
 const PageWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+    gap: 50px;
+    @media ${theme.media.mobile} {
+        grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    }
 `

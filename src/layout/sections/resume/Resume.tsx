@@ -12,35 +12,43 @@ export const Resume = () => {
             <Container>
                 <TitleSection back={"RESUME"} front={"My background"}/>
                 <ResumeGrid>
-                    <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
+                    <ResumeColumn direction={"column"} padding={'20px'} gap={'15px'}>
                         <Title>Education</Title>
                         <ResumeBlock year={'2026-2027'} title={'Frontend developer'} subtitle={'IT-INCUBATOR'}
                                      description={'Education in Front-End Development'}/>
                         <ResumeBlock year={'2022-2026'}
                                      title={'Specialist in the development and implementation of information systems'}
                                      subtitle={'СГУПС'} description={'Higher education'}/>
-                    </FlexWrapper>
-                    <FlexWrapper direction={"column"} padding={'20px'} gap={'15px'}>
+                    </ResumeColumn>
+                    <ResumeColumn direction={"column"} padding={'20px'} gap={'15px'}>
                         <Title>Experience</Title>
                         <ResumeBlock year={'04.2027 - ...'} title={'Frontend developer'}
                                      subtitle={'Project-Based Work / Part-Time Employment'}
                                      description={'Web Application Development'}/>
                         <ResumeBlock year={'03.2025 - ...'} title={'Software Developer'} subtitle={'"PTRB"'}
                                      description={'Development and Implementation of Internet Solutions'}/>
-                    </FlexWrapper>
+                    </ResumeColumn>
                 </ResumeGrid>
             </Container>
         </StyledResume>
 
     );
 };
-
 const StyledResume = styled.section`
     height: fit-content;
+`
+const ResumeColumn = styled(FlexWrapper)`
+    @media ${theme.media.tablet} {
+        gap:10px;
+        padding: 10px 5px;
+    }
 `
 const ResumeGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media ${theme.media.mobile} {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 
 `;
 

@@ -42,7 +42,8 @@ export const GlobalStyle = createGlobalStyle`
             padding: 50px 0;
         }
     }
-    h1 {
+    h1, h2, h3, h4, h5, h6 {
         font-size: inherit;
+        
     }
 `

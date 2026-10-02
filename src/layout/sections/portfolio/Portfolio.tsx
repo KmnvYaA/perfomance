@@ -12,10 +12,10 @@ export const Portfolio = () => {
         <StyledWorks>
             <Container>
                 <TitleSection back={"PORTFOLIO"} front={"My works"}/>
-                <FlexWrapper jusify={'space-around'} align={'center'}>
+                <WorksWrapper jusify={'space-around'} align={'center'} gap={'15px'} wrap={'wrap'}>
                     <PortfolioBlock title={"Waiting:)"} img={wait} showOverlay={false}/>
                     <PortfolioBlock title={"Content Automation and Management Service"} img={support} href={'https://github.com/KmnvYaA/perfomance'} showOverlay={true}/>
-                </FlexWrapper>
+                </WorksWrapper>
             </Container>
         </StyledWorks>
 
@@ -23,5 +23,7 @@ export const Portfolio = () => {
 };
 
 const StyledWorks = styled.section`
-    min-height: max-content;
+`
+const WorksWrapper = styled(FlexWrapper)`
+    
 `
