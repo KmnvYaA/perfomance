@@ -1,45 +1,15 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "../../styles/Theme.ts";
+import {S} from './Menu_Styles.ts';
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
     return (
-        <StyledMenu>
             <ul>
                 {props.menuItems.map((item, index) => {
-                    return <ListItem key={index}>
-                        <Link href="">{item}</Link>
-                    </ListItem>
+                    return <li key={index}>
+                        <S.Link href="">{item}</S.Link>
+                    </li>
                 })}
              
             </ul>
-
-
-        </StyledMenu>
     );
 };
-
-const StyledMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 30px;
-    }
-    @media ${theme.media.mobile} {
-        display: none;
-        
-    }
-`
-const ListItem = styled.li`
-  
-`
-
-const Link = styled.a`
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: ${theme.colors.neutral200};
-    &:hover {
-        color: ${theme.colors.neutral100};
-    }
-    
-`

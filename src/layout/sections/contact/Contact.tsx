@@ -13,11 +13,11 @@ export const Contact = () => {
         <StyledContacts>
             <Container>
                 <TitleSection back={" CONTACT"} front={"Get in touch with me"}/>
-                <FlexWrapper direction={"row"} align={"flex-start"} jusify={"space-around"}>
+                <ContactWrapper  align={"flex-start"} jusify={"space-around"} gap={"15px"}>
                     <StyledData>
-                        <ContactBlock idIcon={"geo"} title={"Address"} description={"Novosibirsk, Russia"}/>
-                        <ContactBlock idIcon={"tel"} title={"Phone"} description={"+7 913 004-28-44"}/>
-                        <ContactBlock idIcon={"email"} title={"Email"} description={"kmnvyaa@gmail.com"}/>
+                        <ContactBlock idIcon={"geo"} title={"Address"} description={"Novosibirsk, Russia"} href="https://www.google.com/maps/search/?api=1&query=Novosibirsk%2C%20Russia"/>
+                        <ContactBlock idIcon={"tel"} title={"Phone"} description={"+7 913 004-28-44"} href="tel:+79130042844"/>
+                        <ContactBlock idIcon={"email"} title={"Email"} description={"kmnvyaa@gmail.com"} href="mailto:kmnvyaa@gmail.com"/>
 
                         <SocialWrapper>
                             <Social />
@@ -30,7 +30,7 @@ export const Contact = () => {
                         <Field placeholder={"Message"} as={"textarea"}/>
                         <Button type={"submit"} width={'100%'} variant={'secondary'}>Send</Button>
                     </StyledForm>
-                </FlexWrapper>
+                </ContactWrapper>
             </Container>
         </StyledContacts>
     );
@@ -38,6 +38,12 @@ export const Contact = () => {
 
 const StyledContacts = styled.section`
     
+`
+const ContactWrapper = styled(FlexWrapper)`
+    flex-direction: row;
+    @media ${theme.media.mobile} {
+        flex-direction: column;
+    }
 `
 const StyledData = styled.div`
     max-width: 460px;
@@ -51,11 +57,23 @@ const StyledData = styled.div`
     border: 1px solid ${theme.colors.primary300};
     justify-content: flex-start;
     align-items: start;
+    
+    @media ${theme.media.tablet} {
+        padding: 20px;
+        max-width: 350px;
+    }
+    @media ${theme.media.mobile} {
+        max-width: 100%;
+    }
 `
 const SocialWrapper = styled.div`
     width: 100%;
     padding-top: 15px;
     border-top: 1px solid ${theme.colors.primary300};
+    
+    @media ${theme.media.tablet} {
+        padding-top: 15px;
+    }
 `;
 const StyledForm = styled.form`
     max-width: 700px;
@@ -72,6 +90,15 @@ const StyledForm = styled.form`
     textarea {
         resize: none;
         height: 155px;
+
+        @media ${theme.media.mobile}  {
+            height: 140px;
+        }
+    }
+    
+    @media ${theme.media.tablet} {
+        padding: 20px;
+        max-width: none;
     }
 `
 const Field = styled.input`
@@ -90,7 +117,19 @@ const Field = styled.input`
     &:focus-visible {
         outline: 1px solid #8F857A;
     }
+    @media ${theme.media.tablet} {
+        font-size: 15px;
+    }
+    @media ${theme.media.mobile} {
+        font-size: 14px;
+    }
 `
 const TitleForm = styled.h3`
     color: ${theme.colors.neutral100};
+    font-size: 18px;
+    
+    @media ${theme.media.tablet} {
+        font-size: 16px;
+        font-weight: 600;
+    }
 `

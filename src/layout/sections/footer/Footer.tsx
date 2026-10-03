@@ -27,10 +27,16 @@ const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
     padding: 10px 0;
+    
+    @media ${theme.media.tablet} {
+        min-height: 15vh;
+    }
 
 `
 const Name = styled.span`
-
+    @media ${theme.media.tablet} {
+        font-size: 15px;
+    }
 `
 const Copyright = styled.small`
 

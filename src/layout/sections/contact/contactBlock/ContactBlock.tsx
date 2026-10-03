@@ -8,10 +8,11 @@ type ContactBlockProps = {
     idIcon: string;
     title: string;
     description: string;
+    href: string;
 }
 export const ContactBlock = (props: ContactBlockProps) => {
     return (
-        <StyledContactBlock>
+        <StyledContactBlock href={props.href}>
             <IconBase iconId={props.idIcon} viewBox={'0 0 50 50'} />
             <FlexWrapper direction="column" align={'flex-start'}>
                 <TitleContact>{props.title}</TitleContact>
@@ -21,7 +22,7 @@ export const ContactBlock = (props: ContactBlockProps) => {
     );
 };
 
-const StyledContactBlock = styled.div`
+const StyledContactBlock = styled.a`
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -38,4 +39,9 @@ const DescriptionContact = styled.span`
     color: ${theme.colors.neutral100};
     font-size: 16px;
     font-weight: 600;
+    
+    @media ${theme.media.mobile} {
+        font-size: 15px;
+        font-weight: 500;
+    }
 `
