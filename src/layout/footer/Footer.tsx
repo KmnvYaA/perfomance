@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Social} from "../../../components/Social.tsx";
-import {theme} from "../../../styles/Theme.ts";
-import {Container} from "../../../components/Container.ts";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {Social} from "../../components/Social.tsx";
+import {theme} from "../../styles/Theme.ts";
+import {Container} from "../../components/Container.ts";
 
 export const Footer = () => {
     return (

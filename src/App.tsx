@@ -8,7 +8,7 @@ import {Skills} from "./layout/sections/skills/Skills.tsx";
 import {Resume} from "./layout/sections/resume/Resume.tsx";
 import {Portfolio} from "./layout/sections/portfolio/Portfolio.tsx";
 import {Contact} from "./layout/sections/contact/Contact.tsx";
-import {Footer} from "./layout/sections/footer/Footer.tsx";
+import {Footer} from "./layout/footer/Footer.tsx";
 
 function App() {
     return (
