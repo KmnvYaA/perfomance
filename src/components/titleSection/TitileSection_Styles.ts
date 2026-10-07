@@ -1,25 +1,7 @@
-import React from 'react';
 import styled from "styled-components";
-import {theme} from "../styles/Theme.ts";
+import {theme} from "../../styles/Theme.ts";
 
-type TitlePropsType = {
-    back: string;
-    front: string;
-}
-export const TitleSection = (props: TitlePropsType) => {
-    return (
-        <StyledTitleWrapper>
-            <StyledBackgroundTitle>
-                {props.back}
-            </StyledBackgroundTitle>
-            <StyledForegroundTitle>
-                {props.front}
-            </StyledForegroundTitle>
-        </StyledTitleWrapper>
-    );
-};
-
-const StyledTitleWrapper = styled.div`
+const TitleWrapper = styled.div`
     position: relative;
     display: flex;
     align-items: center;
@@ -33,7 +15,7 @@ const StyledTitleWrapper = styled.div`
     }
 `;
 
-const StyledBackgroundTitle = styled.h2`
+const BackgroundTitle = styled.h2`
     position: absolute;
     top: 50%; 
     left: 50%;
@@ -51,7 +33,7 @@ const StyledBackgroundTitle = styled.h2`
     }
 `;
 
-const StyledForegroundTitle = styled.span`
+const ForegroundTitle = styled.span`
     position: relative;
     font-weight: 700;
     color: ${theme.colors.neutral100};
@@ -71,3 +53,9 @@ const StyledForegroundTitle = styled.span`
         background: linear-gradient(90deg, ${theme.colors.secondary100}, ${theme.colors.secondary200});
     }
 `;
+
+export const S = {
+    TitleWrapper,
+    ForegroundTitle,
+    BackgroundTitle,
+}

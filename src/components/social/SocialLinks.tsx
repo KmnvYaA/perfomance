@@ -1,11 +1,11 @@
 import React from 'react';
-import {IconBase} from "./icon/IconBase.tsx";
+import {IconBase} from "../icon/IconBase.tsx";
 import styled from "styled-components";
 
 type SocialLinkProps = {
     idIcon: string;
 }
- export const SocialLinks = (props: SocialLinkProps) => {
+ export const SocialLinks: React.FC<SocialLinkProps> = (props: SocialLinkProps) => {
     return (
             <SocialList>
                 <SocialItem>

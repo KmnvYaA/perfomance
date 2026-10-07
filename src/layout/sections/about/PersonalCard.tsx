@@ -1,44 +1,38 @@
 import React from 'react';
 import {CardLine} from "./CardLine.tsx";
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {theme} from "../../../styles/Theme.ts";
+import {S} from './About_Styles.ts';
 
-export const PersonalCard = () => {
+const lineData = [
+    {
+        category: 'Name',
+        description: 'Yana',
+    },
+    {
+        category: 'Email',
+        description: 'kmnvyaa@gmail.com',
+    },
+    {
+        category: 'Age',
+        description: '22',
+    },
+    {
+        category: 'From',
+        description: 'Novosibirsk, Russia',
+    }
+]
+export const PersonalCard: React.FC = () => {
     return (
-        <CardWrapper>
-            <TitleCard>
+        <S.CardWrapper>
+            <S.TitleCard>
                 Personal information
-            </TitleCard>
+            </S.TitleCard>
             <FlexWrapper direction={'column'} gap={'15px'}>
-                <CardLine category={'Name'} description={'Yana'}/>
-                <CardLine category={'Email'} description={'kmnvyaa@gmail.com'}/>
-                <CardLine category={'Age'} description={'22'}/>
-                <CardLine category={'From'} description={'Novosibirsk, Russia'}/>
+                {lineData.map((l, index) => {
+                    return <CardLine category={l.category} key={index}
+                                     description={l.description}/>
+                })}
             </FlexWrapper>
-        </CardWrapper>
+        </S.CardWrapper>
     );
 };
-
-const TitleCard = styled.h3`
-    color: ${theme.colors.neutral100};
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 15px;
-    @media ${theme.media.tablet} {
-        font-size: 18px;
-    }
-    @media ${theme.media.mobile} {
-        font-size: 16px;
-    }
-`
-const CardWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background:  ${theme.colors.primary200};
-    border-radius: 30px;
-    border: 1px solid ${theme.colors.primary300};
-    height: max-content;
-    padding: 30px;
-`

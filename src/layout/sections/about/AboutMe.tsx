@@ -1,71 +1,36 @@
 import React from 'react';
-// import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {TitleSection} from "../../../components/TitleSection.tsx";
-import styled from "styled-components";
+import {TitleSection} from "../../../components/titleSection/TitleSection.tsx";
 import {PersonalCard} from "./PersonalCard.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
-import {theme} from "../../../styles/Theme.ts";
+import {S} from './About_Styles.ts';
 
-export const AboutMe = () => {
+export const AboutMe: React.FC = () => {
     return (
-        <StyledAboutMe>
+        <S.AboutMe>
             <Container>
 
                 <TitleSection back={"ABOUT ME"} front={"Know me better"}/>
-                <PageWrapper>
+                <S.PageWrapper>
                     <FlexWrapper gap={'10px'} direction={'column'} jusify={'space-between'}>
-                        <StyledTitleAbout>
+                        <S.StyledTitleAbout>
                             From design to programming
-                        </StyledTitleAbout>
-                        <StyledTextAbout>
+                        </S.StyledTitleAbout>
+                        <S.StyledTextAbout>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ea quia! Doloremque est
                             ipsa ipsam ipsum officia placeat reiciendis sequi. Aliquid distinctio dolorem ea excepturi
                             ipsa ipsam ipsum officia placeat reiciendis sequi. Aliquid distinctio dolorem ea excepturi
                             ipsa ipsam ipsum officia placeat reiciendis sequi. Aliquid distinctio dolorem ea excepturi
                             ipsa ipsams ipsum officia placeat reiciendis sequi. Aliquid distinctio dolorem ea excepturi
 
-                        </StyledTextAbout>
-                        <StyledTextAbout>
+                        </S.StyledTextAbout>
+                        <S.StyledTextAbout>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, quia.
-                        </StyledTextAbout>
+                        </S.StyledTextAbout>
                     </FlexWrapper>
                     <PersonalCard/>
-                </PageWrapper>
+                </S.PageWrapper>
             </Container>
-
-        </StyledAboutMe>
+        </S.AboutMe>
     );
 };
-const StyledAboutMe = styled.section`
-    min-height: max-content;
-`
-const StyledTitleAbout = styled.h3`
-    font-size: 24px;
-    color: ${theme.colors.neutral100};
-    margin-bottom: 10px;
-    font-weight: 600;
-    @media ${theme.media.tablet} {
-        font-size: 18px;
-    }
-    @media ${theme.media.mobile} {
-        font-size: 16px;
-    }
-`
-
-const StyledTextAbout = styled.p`
-    font-size: 15px;
-    color: ${theme.colors.neutral200};
-    line-height: 1.8;
-    @media ${theme.media.tablet} {
-        font-size: 14px;
-    }
-`
-const PageWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 50px;
-    @media ${theme.media.mobile} {
-        grid-template-columns: repeat(1, minmax(0, 1fr)); 
-    }
-`

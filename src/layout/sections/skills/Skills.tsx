@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitleSection} from "../../../components/TitleSection.tsx";
+import {TitleSection} from "../../../components/titleSection/TitleSection.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {S} from './skill/Skill_Styles.ts';

@@ -1,43 +1,19 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Social} from "../../components/Social.tsx";
-import {theme} from "../../styles/Theme.ts";
+import {Social} from "../../components/social/Social.tsx";
 import {Container} from "../../components/Container.ts";
+import {S} from './Footer_Styles.ts';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"} gap={"15px"} >
-                    <Name>Yana Lyubina</Name>
+                    <S.Name>Yana Lyubina</S.Name>
                     <Social/>
-                    <Copyright>2026 Yana Lyubina, All Rights Reserved</Copyright>
+                    <S.Copyright>2026 Yana Lyubina, All Rights Reserved</S.Copyright>
                 </FlexWrapper>
             </Container>
-        </StyledFooter>
+        </S.Footer>
     );
 };
-
-const StyledFooter = styled.footer`
-    border-top: 2px solid ${theme.colors.primary300};
-    background-color: ${theme.colors.primary400};;
-    min-height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    
-    @media ${theme.media.tablet} {
-        min-height: 15vh;
-    }
-
-`
-const Name = styled.span`
-    @media ${theme.media.tablet} {
-        font-size: 15px;
-    }
-`
-const Copyright = styled.small`
-
-`

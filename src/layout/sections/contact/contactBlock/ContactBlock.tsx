@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
 import {IconBase} from "../../../../components/icon/IconBase.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {theme} from "../../../../styles/Theme.ts";
+import {S} from './../Contact_Styles.ts';
 
 type ContactBlockProps = {
     idIcon: string;
@@ -10,38 +9,14 @@ type ContactBlockProps = {
     description: string;
     href: string;
 }
-export const ContactBlock = (props: ContactBlockProps) => {
+export const ContactBlock: React.FC< ContactBlockProps> = (props: ContactBlockProps) => {
     return (
-        <StyledContactBlock href={props.href}>
+        <S.StyledContactBlock href={props.href}>
             <IconBase iconId={props.idIcon} viewBox={'0 0 50 50'} />
             <FlexWrapper direction="column" align={'flex-start'}>
-                <TitleContact>{props.title}</TitleContact>
-                <DescriptionContact>{props.description}</DescriptionContact>
+                <S.TitleContact>{props.title}</S.TitleContact>
+                <S.DescriptionContact>{props.description}</S.DescriptionContact>
             </FlexWrapper>
-        </StyledContactBlock>
+        </S.StyledContactBlock>
     );
 };
-
-const StyledContactBlock = styled.a`
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    
-`
-const TitleContact = styled.span`
-    color: ${theme.colors.neutral200};
-    font-size: 13px;
-    font-weight: 400;
-`
-const DescriptionContact = styled.span`
-    color: ${theme.colors.neutral100};
-    font-size: 16px;
-    font-weight: 600;
-    
-    @media ${theme.media.mobile} {
-        font-size: 15px;
-        font-weight: 500;
-    }
-`

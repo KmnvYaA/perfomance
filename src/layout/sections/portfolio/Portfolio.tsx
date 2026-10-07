@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitleSection} from "../../../components/TitleSection.tsx";
+import {TitleSection} from "../../../components/titleSection/TitleSection.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {PortfolioBlock} from "./block/PortfolioBlock.tsx";
