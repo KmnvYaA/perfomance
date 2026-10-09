@@ -5,10 +5,12 @@ import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
 import {Button} from "../../../components/Button.tsx";
 import {S} from './Main_Styles.ts'
+import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"main"}>
             <Container>
                 <S.HeroContent>
                     <S.HeroCopy>
@@ -16,19 +18,31 @@ export const Main: React.FC = () => {
 
                         <S.HeroHeading>
                             <S.Greeting>Hi! I’m —</S.Greeting>
-                            <S.MainTitle>Frontend developer</S.MainTitle>
+                            {/*<S.MainTitle>Frontend developer</S.MainTitle>*/}
+                            <S.MainTitle>
+                                <p>Frontend developer</p>
+                                <Typewriter
+                                    options={{
+                                        strings: ['Frontend developer', 'Lyubina Yana'],
+                                        autoStart: true,
+                                        loop: true,
+                                        delay: 100,
+                                    }}
+                                />
+                            </S.MainTitle>
                         </S.HeroHeading>
 
                         <Button variant="default">Hire me</Button>
                     </S.HeroCopy>
-
-                    <picture>
-                        <source
-                            media={theme.media.mobileMini}
-                            srcSet={codeImgMobile}
-                        />
-                        <S.CodeImg src={codeImg} alt="Карточка с кодом" />
-                    </picture>
+                    <Tilt className="background-stripes parallax-effect" perspective={500}>
+                        <picture>
+                            <source
+                                media={theme.media.mobileMini}
+                                srcSet={codeImgMobile}
+                            />
+                            <S.CodeImg src={codeImg} alt="Карточка с кодом"/>
+                        </picture>
+                    </Tilt>
                 </S.HeroContent>
             </Container>
         </S.Main>

@@ -120,6 +120,9 @@ const MainTitle = styled.h1`
     @media ${theme.media.mobileMini} {
         font-size: 30px;
     }
+    p {
+        display: none;
+    }
 `
 export const S = {
     Main,

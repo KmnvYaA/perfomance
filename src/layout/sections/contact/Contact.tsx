@@ -28,7 +28,7 @@ const contactData = [
 ]
 export const Contact: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"contacts"}>
             <Container>
                 <TitleSection back={" CONTACT"} front={"Get in touch with me"}/>
                 <S.ContactWrapper  align={"flex-start"} jusify={"space-around"} gap={"15px"}>

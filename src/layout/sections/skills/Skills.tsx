@@ -50,7 +50,7 @@ const skillData = [
 ]
 export const Skills = () => {
     return (
-        <S.Skills>
+        <S.Skills id={"skills"}>
             <Container>
                 <TitleSection back={"SKILLS"} front={"What i can"}/>
                 <S.SkillsGrid>

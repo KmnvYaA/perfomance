@@ -23,7 +23,7 @@ const workData = [
 
 export const Portfolio: React.FC = () => {
     return (
-        <StyledWorks>
+        <StyledWorks id={"portfolio"}>
             <Container>
                 <TitleSection back={"PORTFOLIO"} front={"My works"}/>
                 <FlexWrapper jusify={'space-around'} align={'center'} gap={'15px'} wrap={'wrap'}>

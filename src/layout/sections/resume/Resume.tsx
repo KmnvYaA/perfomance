@@ -35,7 +35,7 @@ const resumeExperienceData = [
 ]
 export const Resume: React.FC = () => {
     return (
-        <S.Resume>
+        <S.Resume id={"resume"}>
             <Container>
                 <TitleSection back={"RESUME"} front={"My background"}/>
                 <S.ResumeGrid>
