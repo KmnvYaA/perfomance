@@ -3,6 +3,7 @@ import {TitleSection} from "../../../components/titleSection/TitleSection.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {S} from './skill/Skill_Styles.ts';
+import { Fade } from "react-awesome-reveal";
 
 const skillData = [
     {
@@ -54,11 +55,14 @@ export const Skills = () => {
             <Container>
                 <TitleSection back={"SKILLS"} front={"What i can"}/>
                 <S.SkillsGrid>
-                    {skillData.map((s, index)=> {
-                        return <Skill iconId={s.iconId} key={index}
-                                      title={s.title}
-                                      text={s.text}></Skill>
-                    })}
+                    <Fade cascade={true} damping={0.2}>
+                        {skillData.map((s, index) => {
+                            return <Skill iconId={s.iconId} key={index}
+                                          title={s.title}
+                                          text={s.text}></Skill>
+                        })}
+
+                    </Fade>
                 </S.SkillsGrid>
             </Container>
         </S.Skills>

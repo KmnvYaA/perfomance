@@ -2,12 +2,10 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 
 const Work = styled.a`
+    display: block;
     border-radius: 20px;
     border: 1px solid ${theme.colors.primary300};
     background: ${theme.colors.primary200};
-    max-width: 500px;
-    width: 410px;
-    flex-grow: 1;
 `
 const StyledImg = styled.div<{ $showOverlay?: boolean }>`
     position: relative;
@@ -32,7 +30,7 @@ const StyledImg = styled.div<{ $showOverlay?: boolean }>`
         background-color: rgba(0, 0, 0, 0.6);
 
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: ${theme.animations.transition};
     }
 
     ${Work}:hover &::after {

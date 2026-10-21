@@ -6,7 +6,7 @@ import {PortfolioBlock} from "./block/PortfolioBlock.tsx";
 import support from "../../../assets/images/support.png"
 import wait from "../../../assets/images/waiting.png"
 import {Container} from "../../../components/Container.ts";
-
+import { Fade } from "react-awesome-reveal";
 const workData = [
     {
         title: "Waiting:)",
@@ -26,13 +26,21 @@ export const Portfolio: React.FC = () => {
         <StyledWorks id={"portfolio"}>
             <Container>
                 <TitleSection back={"PORTFOLIO"} front={"My works"}/>
-                <FlexWrapper jusify={'space-around'} align={'center'} gap={'15px'} wrap={'wrap'}>
-                    {workData.map((p, index)=> {
-                        return <PortfolioBlock title={p.title} key={index}
-                                               img={p.img}
-                                               showOverlay={p.showOverlay}
-                                               href={p.href}/>
-                    })}
+                <FlexWrapper jusify={'space-around'} align={'center'} gap={'15px'} wrap={'wrap'}><Fade
+                    cascade={true}
+                    damping={0.2}
+                    style={{flexGrow: 1, flexBasis: "410px", maxWidth: "500px"}}
+                >
+                    {workData.map((p, index) => (
+                        <PortfolioBlock
+                            key={index}
+                            title={p.title}
+                            img={p.img}
+                            showOverlay={p.showOverlay}
+                            href={p.href}
+                        />
+                    ))}
+                </Fade>
                 </FlexWrapper>
             </Container>
         </StyledWorks>

@@ -3,6 +3,7 @@ import {TitleSection} from "../../../components/titleSection/TitleSection.tsx";
 import {ResumeBlock} from "./resumeBlock/ResumeBlock.tsx";
 import {Container} from "../../../components/Container.ts";
 import {S} from './Resume_Styled.ts';
+import {Fade} from "react-awesome-reveal";
 
 const resumeEducationData = [
     {
@@ -40,22 +41,26 @@ export const Resume: React.FC = () => {
                 <TitleSection back={"RESUME"} front={"My background"}/>
                 <S.ResumeGrid>
                     <S.ResumeColumn direction={"column"} padding={'20px'} gap={'15px'}>
-                        <S.TitleResume>Education</S.TitleResume>
-                        {resumeEducationData.map((r, index) => {
-                            return <ResumeBlock year={r.year} key={index}
-                                                title={r.title}
-                                                subtitle={r.subtitle}
-                                                description={r.description}/>
-                        })}
+                        <Fade cascade={true} damping={0.3}>
+                            <S.TitleResume>Education</S.TitleResume>
+                            {resumeEducationData.map((r, index) => {
+                                return <ResumeBlock year={r.year} key={index}
+                                                    title={r.title}
+                                                    subtitle={r.subtitle}
+                                                    description={r.description}/>
+                            })}
+                        </Fade>
                     </S.ResumeColumn>
                     <S.ResumeColumn direction={"column"} padding={'20px'} gap={'15px'}>
-                        <S.TitleResume>Experience</S.TitleResume>
-                        {resumeExperienceData.map((r, index) => {
-                            return <ResumeBlock year={r.year} key={index}
-                                                title={r.title}
-                                                subtitle={r.subtitle}
-                                                description={r.description}/>
-                        })}
+                        <Fade cascade={true} damping={0.3}>
+                            <S.TitleResume>Experience</S.TitleResume>
+                            {resumeExperienceData.map((r, index) => {
+                                return <ResumeBlock year={r.year} key={index}
+                                                    title={r.title}
+                                                    subtitle={r.subtitle}
+                                                    description={r.description}/>
+                            })}
+                        </Fade>
                     </S.ResumeColumn>
                 </S.ResumeGrid>
             </Container>

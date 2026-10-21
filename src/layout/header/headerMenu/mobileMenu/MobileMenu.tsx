@@ -3,7 +3,7 @@ import {IconBase} from "../../../../components/icon/IconBase.tsx";
 import {Menu} from "../../../../components/menu/Menu.tsx";
 import {S} from './../HeaderMenu_Styles.ts';
 
-export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+export const MobileMenu: React.FC = () => {
     const [isOpen, setOpen] = React.useState(false)
 
     return (
@@ -17,7 +17,7 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuIte
                 />
             </S.BurgerButton >
             <S.MobileMenuPopUp $isOpen={isOpen} onClick={ () => {setOpen(false)}}>
-                <Menu menuItems={props.menuItems}/>
+                <Menu/>
             </S.MobileMenuPopUp>
 
 

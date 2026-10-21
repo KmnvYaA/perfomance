@@ -8,21 +8,29 @@ const MobileMenuPopUp = styled.div<{$isOpen: boolean}>`
     background-color: ${theme.colors.primary200};
     inset: 0;
     z-index: 99999;
-    display: none;
-
-    ${({$isOpen}) => $isOpen && css`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.6s ease-in-out;
+    
     ul {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        transition: 1s ease-in-out;
     }
+    
+    ${({$isOpen}) => $isOpen && css`
+        transform: translateY(0);
+        
+        & ul {
+            gap: 30px;
+        }
+    `}
+
 `
 const BurgerButton = styled.button`
     position: fixed;

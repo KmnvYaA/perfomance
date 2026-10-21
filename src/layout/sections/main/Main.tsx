@@ -7,6 +7,7 @@ import {Button} from "../../../components/Button.tsx";
 import {S} from './Main_Styles.ts'
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
+import {scroller} from "react-scroll";
 
 export const Main: React.FC = () => {
     return (
@@ -32,7 +33,13 @@ export const Main: React.FC = () => {
                             </S.MainTitle>
                         </S.HeroHeading>
 
-                        <Button variant="default">Hire me</Button>
+                        <Button variant="default" onClick={() => scroller.scrollTo("contacts", {
+                            smooth: true,
+                            duration: 1000,
+                            offset: -40,
+                        })}>
+                            Hire me
+                        </Button>
                     </S.HeroCopy>
                     <Tilt className="background-stripes parallax-effect" perspective={500}>
                         <picture>

@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^5.0.3",
+    "@emotion/react": "^11.14.0",
     "@types/react-scroll": "^1.8.10",
+    "animate.css": "^4.1.1",
     "react": "^18.3.1",
+    "react-awesome-reveal": "^4.3.1",
     "react-dom": "^18.3.1",
     "react-parallax-tilt": "^1.7.346",
     "react-scroll": "^1.9.3",
